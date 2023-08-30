@@ -10,6 +10,9 @@ def multiple_transcriber(filename, numb, type): # transcribe multiple files give
     audio_file_folder = filename
 
     all_files = os.listdir(audio_file_folder)
+    
+    all_files.sort()
+
     audio_files = [file for file in all_files if file.endswith(type)][:numb]
 
     for audio_file in audio_files:
